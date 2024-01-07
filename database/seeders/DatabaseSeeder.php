@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             PustakawanSeeder::class,
             OwnerSeeder::class,
             KasirSeeder::class,
+            LaporanSeeder::class,
         ]);
     }
 }

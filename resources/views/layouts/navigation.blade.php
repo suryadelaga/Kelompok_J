@@ -21,13 +21,13 @@
 
                 @hasrole('owner')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('book')" :active="request()->routeIs('book') || request()->routeIs('book.create')">
+                <x-nav-link :href="route('role')" :active="request()->routeIs('role')">
                         {{ __('Cabang') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('role')" :active="request()->routeIs('role')">
+                <x-nav-link :href="route('book')" :active="request()->routeIs('book') || request()->routeIs('book.create')"> 
                         {{ __('Laporan Kasir') }}
                     </x-nav-link>
                 </div>

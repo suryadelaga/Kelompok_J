@@ -14,14 +14,12 @@
                         <x-slot name="header">
                             <tr>
                                 <th>No</th>
-                                <th>Judul</th>
-                                <th>Penulis</th>
-                                <th>Tahun</th>
-                                <th>Penerbit</th>
-                                <th>Kota</th>
-                                <th>Cover</th>
-                                <th>Kuantitas</th>
-                                <th>Kode Rak</th>
+                                <th>Tanggal</th>
+                                <th>kode Transaksi</th>
+                                <th>Nama Pelanggan</th>
+                                <th>Total</th>
+                                <th>HPP</th>
+                                <th>Laba</th>
                             </tr>
                         </x-slot>
 
@@ -30,16 +28,13 @@
 
                         <tr class="text-center">
                             <td>{{ $num++ }} </td>
-                            <td>{{ $book->title }}</td>
-                            <td>{{ $book->author }}</td>
-                            <td>{{ $book->year }}</td>
-                            <td>{{ $book->publisher }}</td>
-                            <td>{{ $book->city }}</td>
-                            <td class="text-center">
-                                <img src="{{ asset('storage/cover_buku/'.$book->cover) }}" width="100px" class="mx-auto" />
-                            </td>
-                            <td>{{ $book->qty }}</td>
-                            <td>{{ $book->bookshelf->code }}-{{ $book->bookshelf->name }}</td>
+                            <td>{{ $book->Tanggal }}</td>
+                            <td>{{ $book->Kode_transaksi }}</td>
+                            <td>{{ $book->Nama_pelanggan }}</td>
+                            <td>{{ $book->Total }}</td>
+                            <td>{{ $book->HPP }}</td>
+                            <td>{{ $book->Laba }}</td>
+                            
                             <td>
                                 <x-primary-button tag="a" href="{{route('book.edit', $book->id)}}">Edit</x-primary-button>
 
